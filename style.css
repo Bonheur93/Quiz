@@ -114,6 +114,17 @@ input[type=email]{
     padding: 35px;
     margin-top: -30px;
     margin-left: -18px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+
+/* or 158% */
+text-align: center;
+
+color: #555555;
 }
 
 .progressbar{
