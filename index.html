@@ -14,16 +14,17 @@
           <h1>JavaScript Quiz</h1>
           <p class="paragraph">Vos compétences en JavaScript en répondant aux question que nous avons spécialement séléctionné pour vous. C'est futi et c'est gratuit.</p>
          <form action="/" id="form">
+            <div id="message"></div>
             <div class="begin">
                 <label for="text" class="emailLab">Nom</label>
                 <input type="text" id="username" name="username" >
-                <div class="error"></div>
+                <span class="error" id="erreurNom"></span>
              </div>
 
              <div class="begin">
                 <label class="emailLab" for="text">E-mail</label>
                 <input type="email" id="email" name="username" >
-                <div class="error"></div>
+                <span class="error" id="erreurMail"></span>
              </div>
 
              <div class="button">
@@ -111,7 +112,7 @@
                 </div>
                 
         </section>
-        
+
         <script src="index.js"></script>
     
 </body>

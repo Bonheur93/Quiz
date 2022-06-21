@@ -1,57 +1,31 @@
+
+
+
 const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
 
-form.addEventListener('submit', e => {
-
+var error = []
+form.addEventListener('submit', function (e){
     e.preventDefault();
 
-    validateImputs();
-});
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
 
-const setError = (element, message) => {
+    if (username.value.length == 0){
+        document.getElementById("erreurNom").innerText="N’oubliez pas de renseigner votre nom avant de commencer le Quiz.";
+        username.style.border="1px solid red";
+    } else{
+        document.getElementById("erreurNom").innerText=""
+        username.style.border="1px solid green"
+    }
+    if (email.value.length == 0){
+        document.getElementById("erreurMail").innerText = "N’oubliez pas de renseigner votre email avant de commencer le Quiz";
+        email.style.border="1px solid red";
 
-const inputControl = element.parentElement;
-const errorDisplay = inputControl.querySelector('.error');
+    }else{
+        document.getElementById("erreurMail").innerText=""
+        email.style.border="1px solid green"
+    }
 
-
-errorDisplay.innerText = message;
-inputControl.classList.add('error');
-inputControl.classList.remove('success')
-
-
-}
- const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-
- };
- const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email.toLowerCase()));
- }
-
-const validateImputs = () => {
-     const username = username.value.trim();
-     const emailValue = email.value.trim();
-
-     if (usernameValue === '') {
-        setError(username, 'renseignez votre nom');
-      } else {
-        setSuccess(username);
-
-      }
-      if(emailValue === '') {
-         setError(email, 'Email réquis');
     
-      } else if (!isValidEmail(emailValue)){
-        setError(email, 'Saisir une bonne adresse mail');
 
-      } else{
-        setSuccess(email);
-      }
-};
+});
