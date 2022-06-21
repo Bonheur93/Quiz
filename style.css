@@ -66,7 +66,7 @@ h1{
     display: flex;
     flex-direction: column;
     margin: 1px;
-    margin-top: 5px;
+    margin-top: -1em;
 }
 .button{
     text-align: center;
@@ -153,7 +153,6 @@ color: #555555;
     justify-content: space-evenly;
     border-radius: 5px;
 }
-
 .quitter{
     width: 10em;
     height: 2.5em;
@@ -163,14 +162,10 @@ color: #555555;
     box-shadow:  5px 4px 5px #aca9a7;;
     border-color:#EC880C;
     background: rgba(236, 136, 12, 1);
-
-    
-    
 }
 .quitter:hover{
     background-color: #85643d ;
 }
-
 .suivant{
     height: 2.5em;
     width: 10em;
@@ -180,7 +175,6 @@ color: #555555;
     cursor: pointer;  
     box-shadow:  5px 4px 5px rgb(147, 153, 150);;
     border-color:rgba(2, 138, 61, 1);
-
 }
 .suivant:hover{
     background-color: rgb(37, 172, 120); 
@@ -197,7 +191,6 @@ color: #555555;
     border: 3px solid rgba(10, 180, 87, 0.801);
     cursor: pointer;
 }
-
 .ok{
 align-items: center;
   font-size: 100px;
@@ -217,24 +210,17 @@ p{
     border-radius: 2px;
     padding: 5px;
     box-shadow:  5px 5px 5px rgb(165, 184, 236);
-    border-color: rgba(8, 128, 214, 1);
-    
-    
+    border-color: rgba(8, 128, 214, 1);  
 }
 .buttonAccueil{
-    text-align: center;
-    
+    text-align: center; 
 }
 .accueil:hover{
     background-color: rgb(45, 175, 236);
 }
-
-
 .begin input:focus{
     outline: 0;
 }
-
-
 .error{
     color: #fa020f;
     font-size: 12px;
