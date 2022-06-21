@@ -25,7 +25,16 @@ form.addEventListener('submit', function (e){
         document.getElementById("erreurMail").innerText=""
         email.style.border="1px solid green"
     }
-
-    
-
+   
 });
+
+const buttonBegin = document.querySelector("#buttonBegin");
+const quizOne = document.querySelector(".quizOne");
+
+   buttonBegin.addEventListener('click', () => {
+    if(quizOne.style.display === 'none') {
+        quizOne.style.display = 'block';
+       } else {
+        quizOne.style.display = 'none';
+       }
+   });

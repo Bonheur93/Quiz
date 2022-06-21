@@ -226,14 +226,11 @@ p{
 .begin input:focus{
     outline: 0;
 }
-/* .begin.success input{
-border-color: #028A3D;
-} */
+
 
 .error{
     color: #fa020f;
-    font-size: 9px;
-    height: 13px;
+    font-size: 12px;
 }
 
 
