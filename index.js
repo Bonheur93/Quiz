@@ -3,7 +3,7 @@
 
 const form = document.getElementById('form');
 
-var error = []
+let error = []
 form.addEventListener('submit', function (e){
     e.preventDefault();
 
@@ -30,8 +30,14 @@ form.addEventListener('submit', function (e){
 
 const buttonBegin = document.querySelector("#buttonBegin");
 const quizOne = document.querySelector(".quizOne");
-const sectionLogin =document.querySelector('.sectionLogin');
-const quitter = document.querySelector('.quitter')
+const sectionLogin =document.querySelector(".sectionLogin");
+const quitter = document.querySelector(".quitter");
+const suivant = document.querySelector(".suivant");
+const end1 = document.querySelector(".end1");
+const accueil = document.getElementById("accueil");
+
+
+   
 
    buttonBegin.addEventListener('click', () => {
     if(quizOne.style.display === 'none') {
@@ -41,11 +47,23 @@ const quitter = document.querySelector('.quitter')
         quizOne.style.display = 'none';
        }
    });
+
    quitter.addEventListener('click', () => {
-    if(buttonBegin.style.display === 'none') {
-    buttonBegin.style.display ='block';
+    if(end1.style.display === 'none') {
+        end1.style.display ='block';
     quizOne.style.display ='none';
     }else{
-        buttonBegin.style.display ='none';
+        end1.style.display ='none';
     }
    });
+
+   accueil.addEventListener('click', () => {
+    if(sectionLogin.style.display === 'none') {
+        sectionLogin.style.display ='block';
+        end1.style.display ='none';
+    }
+   });
+
+
+
+   
