@@ -13,7 +13,7 @@
       <section action="formLogin" class="sectionLogin">
           <h1>JavaScript Quiz</h1>
           <p class="paragraph">Vos compétences en JavaScript en répondant aux question que nous avons spécialement séléctionné pour vous. C'est futi et c'est gratuit.</p>
-         <form action="/" id="form">
+         <form id="form">
             <div id="message"></div>
             <div class="begin">
                 <label for="text" class="emailLab">Nom</label>
@@ -23,12 +23,12 @@
 
              <div class="begin">
                 <label class="emailLab" for="text">E-mail</label>
-                <input type="email" id="email" name="username" >
+                <input type="email" id="email" name="username">
                 <span class="error" id="erreurMail"></span>
              </div>
 
              <div class="button">
-                <button type="submit" class="buttonBegin" id="buttonBegin">Commencer</button>
+                <button type="button" class="buttonBegin" id="buttonBegin">Commencer</button>
              </div>
              
          </form>
@@ -64,7 +64,7 @@
                         </label>
                     </div>
                     <div class="assert">
-                        <label for="text1">
+                        <label for="1" >
                             <input type="radio" id="text1" class="ts" name="1">
                             <span>.j</span>
                         </label>
