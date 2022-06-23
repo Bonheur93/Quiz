@@ -37,6 +37,7 @@ username.addEventListener ('input', function(){
         document.getElementById("erreurNom").innerText="N’oubliez pas de renseigner votre nom avant de commencer le Quiz.";
     }
 });
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Fonction pour tester le regex pour validation de mail et username 
 
