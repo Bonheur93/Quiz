@@ -80,9 +80,7 @@ function checkIdentityMail() {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
+// Changement de form x à y
 
 buttonBegin.addEventListener('click', (e) => {
     e.preventDefault()
