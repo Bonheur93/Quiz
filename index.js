@@ -242,5 +242,11 @@ let minute = 100;
     }
  }, 1000);
 
+ // Création de fonction pour verifier le choix de la bonne réponse
+
+ function bonneReponse(indexQuestion){
+    
+ }
+
 
    
