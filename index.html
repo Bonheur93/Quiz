@@ -28,52 +28,52 @@
              </div>
 
              <div class="button">
-                <button type="button" class="buttonBegin" id="buttonBegin">Commencer</button>
+                <button type="button" class="buttonBegin" id="buttonBegin" onclick="">Commencer</button>
              </div>
              
          </form>
         </section>
 
         <Section class="quizOne" id="quizOne">
-            <p class="paragraph1">Quel est le type d'un fichier javascrip?</p>
+            <p class="paragraph1" id="question-affiche"></p>
             <div class="question">
                 <label for="name">Question 1/15</label>
-                <label for="num">30</label>
+                <label for="num" id="minuteur">60</label>
             </div>
             <div class="container">
-                <div class="progressbar">
-                    <div class="progressBar"></div>
+                <div class="progressbar" id="progressBarre">
+                    <div class="progressBar" id="progressBarr"></div>
                 </div>
                 <form action="" class="assertion" id="">
                     <div class="assert">
                         <label for="text1">
-                            <input type="radio" id="text1" class="ts" name="1">
-                            <span>.ts</span>
+                            <input type="radio" id="text1" class="ts assertions" name="1">
+                            <span></span>
                         </label>
                     </div>
                     <div class="assert">
                         <label for="text1">
-                            <input type="radio" id="text1" class="ts" name="1">
-                            <span>.jsx</span>
+                            <input type="radio" id="text1" class="ts assertions" name="1">
+                            <span></span>
                         </label>
                     </div>
                     <div class="assert">
                         <label for="text1">
-                            <input type="radio" id="text1" class="ts" name="1">
-                            <span>.js</span>
+                            <input type="radio" id="text1" class="ts assertions" name="1">
+                            <span></span>
                         </label>
                     </div>
                     <div class="assert">
                         <label for="1" >
-                            <input type="radio" id="text1" class="ts" name="1">
-                            <span>.j</span>
+                            <input type="radio" id="text1" class="ts assertions" name="1">
+                            <span></span>
                         </label>
                     </div>
                 </form>
     
                 <div class="buttonQuitter">
                     <button class="quitter">Quitter</button>
-                    <button type="button" class="suivant-inactif">Suivant</button>
+                    <button type="button" class="suivant-inactif" id="btn-suivant">Suivant</button>
                 </div>
             </div>
         </Section>
