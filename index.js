@@ -11,6 +11,15 @@ const quitter = document.querySelector(".quitter");
 const suivant = document.querySelector(".suivant");
 const end1 = document.querySelector(".end1");
 const accueil = document.getElementById("accueil");
+const questionForm = document.querySelector('#questionForm');
+const chargeQuiz = document.querySelector('#chargeQuiz');
+const minuteur = document.querySelector('#minuteur')
+//obj pour contenir les infos sur le user
+let utilisateur = {
+    nom: '',
+    email: '',
+    score: 0
+}
 
 const form = document.getElementById('form');
 
@@ -43,11 +52,13 @@ username.addEventListener ('input', function(){
 
 function checkEmail (email){
     const validEmail = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+    utilisateur.email = email.value;
     return validEmail.test(email.value); 
 }
 
 function checkName (username){
     const validUserName = /^([a-z A-Z]{3,20})$/;
+    utilisateur.nom = username.value;
     return validUserName.test(username.value); 
 }
 
@@ -110,7 +121,7 @@ buttonBegin.addEventListener('click', (e) => {
     }
    });
 
-   // variable 
+   // object question active 
 let questionActif = {
     index: 0
 }
@@ -119,98 +130,94 @@ let questionActif = {
     {
         TitreQuestion : "Quel est le type d'un fichier javascrip?",
         assertion :[".ts", ".jsx", ".js", ".j"],
-        Reponse : 2,
+        Reponse : '.js',
     },
 
     {
         TitreQuestion : "Qui est le chef de la famille?",
         assertion :["Enfent", "Papa", "Maman", "Tente"],
-        Reponse : 1,
+        Reponse : 'Papa',
     },
 
     {
         TitreQuestion : "Quel est la capitale de la RDC?",
         assertion :["Kisangani", "Goma", "Beni", "Kinshasa"],
-        Reponse : 3,
+        Reponse : 'Kinshasa',
     },
 
     {
         TitreQuestion : "Comment s'appelle l'animal qui mange les verdures?",
         assertion :["Herbivor", "Carnivor", "Insectivor", "Omnivor"],
-        Reponse : 0,
+        Reponse : 'Herbivor',
     },
 
     {
         TitreQuestion : "La poule est de quelle classe d'animaux?",
         assertion :["Batracien", "Volaille", "Rappasse", "Reptile"],
-        Reponse : 1,
+        Reponse : 'Volaille',
     },
 
     {
         TitreQuestion : "Comment s'appelle l'enfant d'un lion?",
         assertion :["Chaton", "Poussin", "Lionçaux", "Dinde"],
-        Reponse : 2,
+        Reponse : 'Lionçaux',
     },
 
     {
         TitreQuestion : "L'informatique c'est la science de?",
         assertion :["Corp humain", "De l'eau", "De la Sagesse", "Traitement de données"],
-        Reponse : 3,
+        Reponse : 'Traitement',
     },
 
     {
         TitreQuestion : "Quel est le pays le plus peuplé de l'Afrique?",
         assertion :["RDcongo", "Nigeria", "Maroc", "Tente"],
-        Reponse : 1,
+        Reponse : 'Nigeria',
     },
 
     {
         TitreQuestion : "Comment s'appelle l'objet approprié pour boire de l'eau?",
         assertion :["Une Assiette", "Un Gobellet", "Une fourchette", "Une Couilleur"],
-        Reponse : 1,
+        Reponse : 'Un Gobellet',
     },
 
     {
-        TitreQuestion : "COmment s'appelle l'arbre de l'avoca?",
+        TitreQuestion : "Comment s'appelle l'arbre de l'avoca?",
         assertion :["Le manguier", "L'avocatier", "Le citronier", "Le cotonier"],
-        Reponse : 1,
+        Reponse : 'Lavocatier',
     },
 
     {
-        TitreQuestion : "COmment s'appelle l'arbre de la mangue?",
+        TitreQuestion : "Comment s'appelle l'arbre de la mangue?",
         assertion :["Le manguier", "L'avocatier", "Le citronier", "Le cotonier"],
-        Reponse : 0,
+        Reponse : 'Le manguier',
     },
 
     {
         TitreQuestion : "La chèvre est ?",
         assertion :["Carnivor", "Herbivor", "Insectivor", "Omnivor"],
-        Reponse : 1,
+        Reponse : 'Herbivor',
     },
 
     {
         TitreQuestion : "Quelle est le fleuve le plus long de l'afrique?",
         assertion :["Le fleuve nil", "Le fleuve Congo", "Le fleuve Zambeze", "Fleuve Missisipi"],
-        Reponse : 1,
+        Reponse : 'Le fleuve Congo',
     },
 
     {
         TitreQuestion : "Quelle un organe de sens pour écouter?",
         assertion :["l'Ouie", "les Narines", "Le Gou", "Le touché"],
-        Reponse : 0,
+        Reponse : 'Ouie',
     },
 
     {
         TitreQuestion : "Que signifie Falacieux?",
         assertion :["Menteur", "Prometteur", "Verité", "Droit"],
-        Reponse : 0,
+        Reponse : 'Menteur',
     },
    ]
-//Changer le page quand on appuie sur suivant
-btnSuivant.addEventListener('click', () => {
-    questionActif.index += 1;
-    chargeQuestion(questionActif.index);
-});   
+
 // function pour charger toutes les questions
 function chargeQuestion(indexQuestion) {
     if(indexQuestion < question.length) {
@@ -242,13 +249,38 @@ let minute = 100;
     }
  }, 1000);
 
- // Création de fonction pour verifier le choix de la bonne réponse
+ 
 
- function bonneReponse(indexQuestion){
-    if(bonneReponse = assertion.length){
-        
+ //Changer le page quand on appuie sur suivant et enregistrement des réponses
+btnSuivant.addEventListener('click', () => {
+   for (let i = 0; i < assertions.length; i++) {
+    if(assertions[i].checked) {
+        alert(assertions[i].value +' = '+question[questionActif.index].Reponse);
+        if(assertions[i].value == question[questionActif.index].Reponse) {
+            alert('reussite');
+            utilisateur.score += 1;
+            alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+        }
+        else {
+            alert('echec');
+            alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+        }
+        questionActif.index += 1;
+        chargeQuiz.innerText = 'Question ' + questionActif.index + '/' + question.length;
+        chargeQuestion(questionActif.index);
+        document.querySelector('#questionForm').reset();    
+        break;
+
+
     }
- }
+    
+   }
+});   
+
+
+
+
+
 
 
    
