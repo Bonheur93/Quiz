@@ -253,7 +253,7 @@ let minute = 100;
 
  //Changer le page quand on appuie sur suivant et enregistrement des réponses
 btnSuivant.addEventListener('click', () => {
-   for (let i = 0; i < assertions.length; i++) {
+   for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
     if(assertions[i].checked) {
         alert(assertions[i].value +' = '+question[questionActif.index].Reponse);
         if(assertions[i].value == question[questionActif.index].Reponse) {
