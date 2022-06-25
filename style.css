@@ -245,10 +245,13 @@ p{
 
 .congrat{
     display: none;
+    position: relative;
+    margin:auto;
 }
 
 .failed{
     display: block;
+    margin: auto; 
 }
 
 
