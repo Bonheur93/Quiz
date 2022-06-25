@@ -8,7 +8,7 @@ min-width: 400px;
  }
  
 .sectionLogin{
-display: none;
+display: block;
 position: relative;
 width: 350px;
 height: 400px;
@@ -34,20 +34,6 @@ margin:auto;
     
 }
 .end{
-    display: block;
-    position: relative;
-    width: 350px;
-    height: 400px;
-    left: 0%;
-    top: 40px;
-    padding: 40px;
-    background-color: #ffff;
-    border-radius: 5px;
-    margin:auto;
-    text-align: center;
-         
-}
-.end1{
     display: none;
     position: relative;
     width: 350px;
@@ -61,6 +47,20 @@ margin:auto;
     text-align: center;
          
 }
+/* .end1{
+    display: none;
+    position: relative;
+    width: 350px;
+    height: 400px;
+    left: 0%;
+    top: 40px;
+    padding: 40px;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin:auto;
+    text-align: center;
+         
+} */
 
 h1{
     text-align: center;

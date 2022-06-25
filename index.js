@@ -9,8 +9,9 @@ const quizOne = document.querySelector(".quizOne");
 const sectionLogin =document.querySelector(".sectionLogin");
 const quitter = document.querySelector(".quitter");
 const suivant = document.querySelector(".suivant");
-const end1 = document.querySelector(".end1");
-const accueil = document.getElementById("accueil");
+const end = document.querySelector(".end");
+// const accueil = "accueil";
+const accueil = document.getElementById('accueil');
 const questionForm = document.querySelector('#questionForm');
 const chargeQuiz = document.querySelector('#chargeQuiz');
 const minuteur = document.querySelector('#minuteur')
@@ -106,18 +107,18 @@ buttonBegin.addEventListener('click', (e) => {
    });
 
    quitter.addEventListener('click', () => {    
-    if(end1.style.display === 'none') {
-        end1.style.display ='block';
+    if(end.style.display === 'none') {
+        end.style.display ='block';
     quizOne.style.display ='none';
     }else{
-        end1.style.display ='none';
+        end.style.display ='none';
     }
    });
 
    accueil.addEventListener('click', () => {
     if(sectionLogin.style.display === 'none') {
         sectionLogin.style.display ='block';
-        end1.style.display ='none';
+        end.style.display ='none';
     }
    });
 
