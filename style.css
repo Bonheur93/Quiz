@@ -208,12 +208,12 @@ font-size: max (3vw 35px);
     border: 3px solid rgba(10, 180, 87, 0.801);
     cursor: pointer;
 }
-.ok{
-align-items: center;
+/* .ok{
+  align-items: center;
   font-size: 100px;
   color: rgba(2, 138, 61, 1);
   width: 100px;
-}
+} */
 p{
     text-align: center;
 }
@@ -242,6 +242,15 @@ p{
     color: #fa020f;
     font-size: 12px;
 }
+
+.congrat{
+    display: none;
+}
+
+.failed{
+    display: block;
+}
+
 
 
  
