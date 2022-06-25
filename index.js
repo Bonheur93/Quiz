@@ -266,7 +266,7 @@ btnSuivant.addEventListener('click', () => {
             alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
         }
         questionActif.index += 1;
-        chargeQuiz.innerText = 'Question' + questionActif.index + "/ " + question.length;
+        chargeQuiz.innerText = 'Question' + questionActif.index + '/' + question.length;
         chargeQuestion(questionActif.index);
         document.querySelector('#questionForm').reset();    
         break;
