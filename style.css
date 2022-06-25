@@ -244,13 +244,13 @@ p{
 }
 
 .congrat{
-    display: none;
+    display: block;
     position: relative;
     margin:auto;
 }
 
 .failed{
-    display: block;
+    display: none;
     margin: auto; 
 }
 
