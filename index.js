@@ -16,6 +16,8 @@ const questionForm = document.querySelector('#questionForm');
 const chargeQuiz = document.querySelector('#chargeQuiz');
 const minuteur = document.querySelector('#minuteur');
 const formScore = document.querySelector (".formScore");
+const prenom = document.querySelector (".prenom");
+const adMail = document.querySelector (".adMail");
 //obj pour contenir les infos sur le user
 let utilisateur = {
     nom: '',
@@ -101,6 +103,8 @@ buttonBegin.addEventListener('click', (e) => {
         sectionLogin.style.display ='none';
         quizOne.style.display = 'block';
         chargeQuestion(questionActif.index);
+        prenom.innerText= utilisateur.nom;
+        adMail.innerText= utilisateur.email ;
     } else {
         console.log("non");
     }
@@ -267,19 +271,38 @@ btnSuivant.addEventListener('click', () => {
         }
         else {
             //alert('echec');
-            //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+           // alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+            
         }
+
         questionActif.index += 1;
         chargeQuestion(questionActif.index);
-        document.querySelector('#questionForm').reset();    
+        document.querySelector('#questionForm').reset();
+        console.log(utilisateur.score);    
+       
         break;
     }
+    // vérifier la longueur de la question et le compteur avec l'index de la question sont égales pour afin passer à la dernière section
      if(questionActif.index == (question.length-1)){
         quizOne.style.display = 'none';
         end.style.display = 'block';
-        formScore.innerText = 'Question ' + '' + nbrQuest + '/' + question.length; 
+        const score = document.querySelector(".score");
+        score.textContent = utilisateur.score + "/15" ;
+
+        
+        // prenom.innerText = nom;
+        // adMail.innerText = email;
+
+        //formScore.innerText = 'Question ' + '' + nbrQuest + '/' + question.length; 
     }
     
+    // function scoreCalcule (score) {
+        
+    //     if (assertions[i].value < 8);
+    //     end.failed.style.display = 'block';
+
+    // }
+
    }
 });   
 
