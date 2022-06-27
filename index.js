@@ -14,7 +14,8 @@ const end = document.querySelector(".end");
 const accueil = document.getElementById('accueil');
 const questionForm = document.querySelector('#questionForm');
 const chargeQuiz = document.querySelector('#chargeQuiz');
-const minuteur = document.querySelector('#minuteur')
+const minuteur = document.querySelector('#minuteur');
+const formScore = document.querySelector (".formScore");
 //obj pour contenir les infos sur le user
 let utilisateur = {
     nom: '',
@@ -167,7 +168,7 @@ let questionActif = {
     {
         TitreQuestion : "L'informatique c'est la science de?",
         assertion :["Corp humain", "De l'eau", "De la Sagesse", "Traitement de données"],
-        Reponse : 'Traitement',
+        Reponse : 'Traitement de données',
     },
 
     {
@@ -224,6 +225,8 @@ function chargeQuestion(indexQuestion) {
     if(indexQuestion < question.length) {
         //Charger les questions sur la forme
         questionAffiche.textContent = question[indexQuestion].TitreQuestion;
+        let nbrQuest = parseInt(indexQuestion) + 1
+        chargeQuiz.innerText = 'Question ' + '' + nbrQuest + '/' + question.length; 
         for(let i = 0; i < question[indexQuestion].assertion.length; i++) {
             assertions[i].value = question[indexQuestion].assertion[i];
             // afficher les assertion sur la forme 
@@ -256,23 +259,25 @@ let minute = 100;
 btnSuivant.addEventListener('click', () => {
    for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
     if(assertions[i].checked) {
-        alert(assertions[i].value +' = '+question[questionActif.index].Reponse);
+        assertions[i].value +' = '+question[questionActif.index].Reponse;
         if(assertions[i].value == question[questionActif.index].Reponse) {
-            alert('reussite');
+            //alert('reussite');
             utilisateur.score += 1;
-            alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+            //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
         }
         else {
-            alert('echec');
-            alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+            //alert('echec');
+            //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
         }
         questionActif.index += 1;
-        chargeQuiz.innerText = 'Question' + questionActif.index + '/' + question.length;
         chargeQuestion(questionActif.index);
         document.querySelector('#questionForm').reset();    
         break;
-
-
+    }
+     if(questionActif.index == (question.length-1)){
+        quizOne.style.display = 'none';
+        end.style.display = 'block';
+        formScore.innerText = 'Question ' + '' + nbrQuest + '/' + question.length; 
     }
     
    }
