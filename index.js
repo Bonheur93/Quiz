@@ -18,6 +18,8 @@ const minuteur = document.querySelector('#minuteur');
 const formScore = document.querySelector (".formScore");
 const prenom = document.querySelector (".prenom");
 const adMail = document.querySelector (".adMail");
+const failed = document.querySelector('.failed');
+const congrat = document.querySelector ('.congrat')
 //obj pour contenir les infos sur le user
 let utilisateur = {
     nom: '',
@@ -114,6 +116,7 @@ buttonBegin.addEventListener('click', (e) => {
    quitter.addEventListener('click', () => {    
     if(end.style.display === 'none') {
         end.style.display ='block';
+        imgFaled()
     quizOne.style.display ='none';
     }else{
         end.style.display ='none';
@@ -213,7 +216,7 @@ let questionActif = {
 
     {
         TitreQuestion : "Quelle un organe de sens pour écouter?",
-        assertion :["l'Ouie", "les Narines", "Le Gou", "Le touché"],
+        assertion :["Ouie", "les Narines", "Le Gou", "Le touché"],
         Reponse : 'Ouie',
     },
 
@@ -251,61 +254,77 @@ let minute = 100;
  // minuteur de la séconde 
  let miniterie = 60;
  setInterval(() => {
-    if(miniterie >= 0 && quizOne.style.display == 'block'){
+    if(miniterie > 0  && quizOne.style.display == 'block'){
         minuteur.innerText=miniterie;
         miniterie --;
+       
+    } else if(miniterie==0){
+         pageSuivante(this); 
+         miniterie = 60;
+         minute = 100;
     }
+       
  }, 1000);
 
+
+
+ const pageSuivante = function (){
+    for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
+        if(assertions[i].checked) {
+            assertions[i].value +' = '+question[questionActif.index].Reponse;
+            if(assertions[i].value == question[questionActif.index].Reponse) {
+                //alert('reussite');
+                utilisateur.score += 1;
+
+                
+                //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+            }
+            else {
+                //alert('echec');
+               // alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+                
+            }
+    
+            questionActif.index += 1;
+            chargeQuestion(questionActif.index);
+            document.querySelector('#questionForm').reset();
+            console.log(utilisateur.score);    
+           
+            break;
+            
+        } 
+
+        // vérifier la longueur de la question et le compteur avec l'index de la question sont égales pour afin passer à la dernière section
+         if(questionActif.index == (question.length-1)){
+            quizOne.style.display = 'none';
+            end.style.display = 'block';
+            imgFaled()
+            const score = document.querySelector(".score");
+            score.textContent = utilisateur.score + "/15" ;
+            
+             
+        }
+       
+       }
+
+ }
+ function imgFaled(){
+    if ( utilisateur.score < 8){
+        svgFaled.innerHTML = '<svg class="failed" width="174" height="174" viewBox="0 0 174 174" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116.464 60.2891C116.464 59.5414 115.852 58.9297 115.105 58.9297L103.89 58.9807L86.9996 79.1164L70.1264 58.9977L58.8945 58.9467C58.1469 58.9467 57.5352 59.5414 57.5352 60.3061C57.5352 60.6289 57.6541 60.9348 57.858 61.1897L79.9648 87.5275L57.858 113.848C57.6527 114.097 57.5388 114.409 57.5352 114.732C57.5352 115.48 58.1469 116.091 58.8945 116.091L70.1264 116.04L86.9996 95.9047L103.873 116.023L115.088 116.074C115.835 116.074 116.447 115.48 116.447 114.715C116.447 114.392 116.328 114.086 116.124 113.831L94.0514 87.5105L116.158 61.1727C116.362 60.9348 116.464 60.6119 116.464 60.2891Z" fill="#FF3838"/><path d="M87 11.0469C44.9613 11.0469 10.875 45.1332 10.875 87.1719C10.875 129.211 44.9613 163.297 87 163.297C129.039 163.297 163.125 129.211 163.125 87.1719C163.125 45.1332 129.039 11.0469 87 11.0469ZM87 150.383C52.098 150.383 23.7891 122.074 23.7891 87.1719C23.7891 52.2699 52.098 23.9609 87 23.9609C121.902 23.9609 150.211 52.2699 150.211 87.1719C150.211 122.074 121.902 150.383 87 150.383Z" fill="#FF3838"/></svg>';
+
+    } 
  
+ }
+
 
  //Changer le page quand on appuie sur suivant et enregistrement des réponses
-btnSuivant.addEventListener('click', () => {
-   for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
-    if(assertions[i].checked) {
-        assertions[i].value +' = '+question[questionActif.index].Reponse;
-        if(assertions[i].value == question[questionActif.index].Reponse) {
-            //alert('reussite');
-            utilisateur.score += 1;
-            //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
-        }
-        else {
-            //alert('echec');
-           // alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
-            
-        }
+btnSuivant.addEventListener('click', function(){
 
-        questionActif.index += 1;
-        chargeQuestion(questionActif.index);
-        document.querySelector('#questionForm').reset();
-        console.log(utilisateur.score);    
-       
-        break;
-    }
-    // vérifier la longueur de la question et le compteur avec l'index de la question sont égales pour afin passer à la dernière section
-     if(questionActif.index == (question.length-1)){
-        quizOne.style.display = 'none';
-        end.style.display = 'block';
-        const score = document.querySelector(".score");
-        score.textContent = utilisateur.score + "/15" ;
+    pageSuivante(this); 
+    miniterie = 60;
+    minute = 100;
 
-        
-        // prenom.innerText = nom;
-        // adMail.innerText = email;
-
-        //formScore.innerText = 'Question ' + '' + nbrQuest + '/' + question.length; 
-    }
-    
-    // function scoreCalcule (score) {
-        
-    //     if (assertions[i].value < 8);
-    //     end.failed.style.display = 'block';
-
-    // }
-
-   }
-});   
-
+}) 
 
 
 
