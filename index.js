@@ -176,8 +176,8 @@ let questionActif = {
 
     {
         TitreQuestion : "L'informatique c'est la science de?",
-        assertion :["Corp humain", "De l'eau", "De la Sagesse", "Traitement de données"],
-        Reponse : 'Traitement de données',
+        assertion :["Corp humain", "De l'eau", "De la Sagesse", "Traitement de data"],
+        Reponse : 'Traitement de data',
     },
 
     {
