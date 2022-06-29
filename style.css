@@ -200,8 +200,8 @@ font-size: max (3vw 35px);
     border-color:rgb(115, 189, 147);
     cursor: not-allowed ;
 }
-.suivant:hover{
-    background-color: rgb(37, 172, 120); 
+.suivant-inactif:hover{
+    background-color: rgb(7, 97, 62); 
 }
 .assert{
     margin: 20px;
@@ -363,9 +363,9 @@ p{
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 400px;
+        height: 200px;
         /* margin-top: 260px; */
-        margin-bottom: 0px;
+        margin-bottom: -1px;
     }
 
     .quitter{
@@ -390,7 +390,13 @@ p{
     box-shadow:  5px 4px 5px rgb(147, 153, 150);;
     border-color:rgb(115, 189, 147);
     /* cursor: not-allowed ; */
+}
 
+.buttonQuitter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 5px;
 }
 .suivant-inactif:hover{
     background-color: rgb(5, 95, 61); 

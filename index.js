@@ -195,7 +195,7 @@ let questionActif = {
     {
         TitreQuestion : "Comment s'appelle l'arbre de l'avoca?",
         assertion :["Le manguier", "L'avocatier", "Le citronier", "Le cotonier"],
-        Reponse : 'Lavocatier',
+        Reponse : 'L\'\avocatier',
     },
 
     {
@@ -296,7 +296,7 @@ let minute = 100;
         } 
 
         // vérifier la longueur de la question et le compteur avec l'index de la question sont égales pour afin passer à la dernière section
-         if(questionActif.index >= (question.length-1)){
+         if(questionActif.index == (question.length)){
             quizOne.style.display = 'none';
             end.style.display = 'block';
             imgFaled()
