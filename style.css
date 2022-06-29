@@ -287,7 +287,7 @@ p{
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 430px;
+        height: 500px;
         /* margin-top: 260px; */
         margin-bottom: 0px;
     }
@@ -301,8 +301,8 @@ p{
         align-items: center;
         justify-content: center;
         width: 200px;
-        height: 480px;
-        margin-top: 210px;
+        height: 510px;
+        /* margin-top: 210px; */
         margin-bottom: 0px;
         margin-left: 70px;
     }
@@ -316,8 +316,8 @@ p{
         align-items: center;
         justify-content: center;
         width: 200px;
-        height: 480px;
-        margin-top: 210px;
+        height: 530px;
+        /* margin-top: 210px; */
         margin-bottom: 0px;
         margin-left: 20px;
     }
