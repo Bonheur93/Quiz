@@ -344,35 +344,59 @@ p{
 
 @media screen and (max-width : 1000px) {
     .quizOne{
-        display: block;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 300px;
         height: 400px;
-    
         margin-bottom: 0px;
     }
+
+
     
 }
 
 @media screen and (max-width : 750px) {
     
     .quizOne{
-        display: block;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 460px;
+        height: 400px;
         /* margin-top: 260px; */
         margin-bottom: 0px;
     }
 
-    
+    .quitter{
+        width: 10em;
+        height: 2.5em;
+        color:white;
+        font-size: 11px;
+        cursor: pointer;
+        box-shadow:  4px 3px 4px #aca9a7;;
+        border-color:#EC880C;
+        background: rgba(236, 136, 12, 1);
+
 }
 
+.suivant-inactif{
+    height: 2.5em;
+    width: 10em;
+    color:white;
+    font-size: 11px;
+    background: rgb(11, 172, 84);
+    cursor: pointer;  
+    box-shadow:  5px 4px 5px rgb(147, 153, 150);;
+    border-color:rgb(115, 189, 147);
+    /* cursor: not-allowed ; */
+
+}
+
+}
 @media screen and (max-width : 500px) {
     .quizOne{
-        display: block;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 200px;
@@ -387,7 +411,7 @@ p{
  
 @media screen and (max-width : 350px) {
     .quizOne{
-        display: block;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 180px;
