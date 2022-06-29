@@ -175,9 +175,9 @@ let questionActif = {
     },
 
     {
-        TitreQuestion : "L'informatique c'est la science de?",
-        assertion :["Corp humain", "De l'eau", "De la Sagesse", "Traitement de data"],
-        Reponse : 'Traitement de data',
+        TitreQuestion : "Traduisez \"\Salut !\"\ en Englais?",
+        assertion :["You", "How it it", "Wake-up", "Hello!"],
+        Reponse : 'Hello!',
     },
 
     {
@@ -193,7 +193,7 @@ let questionActif = {
     },
 
     {
-        TitreQuestion : "Comment s'appelle l'arbre de l'avoca?",
+        TitreQuestion : "Comment s'appelle l'arbre de l'avocat?",
         assertion :["Le manguier", "L'avocatier", "Le citronier", "Le cotonier"],
         Reponse : 'L\'\avocatier',
     },
@@ -212,8 +212,8 @@ let questionActif = {
 
     {
         TitreQuestion : "Quelle est le fleuve le plus long de l'afrique?",
-        assertion :["Le fleuve nil", "Le fleuve Congo", "Le fleuve Zambeze", "Fleuve Missisipi"],
-        Reponse : 'Le fleuve Congo',
+        assertion :["fleuve nil", "fleuve Congo", "fleuve Zambeze", "Fleuve Missisipi"],
+        Reponse : 'fleuve nil',
     },
 
     {
