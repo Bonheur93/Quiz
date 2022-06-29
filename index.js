@@ -289,7 +289,6 @@ let minute = 100;
             chargeQuestion(questionActif.index);
             document.querySelector('#questionForm').reset();
             console.log(utilisateur.score);    
-           
             //break;
             
         } 

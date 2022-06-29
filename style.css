@@ -63,10 +63,18 @@ margin:auto;
 } */
 
 h1{
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #555555;
     text-align: center;
     margin-top: 10px;
-    font-size: max (3vw 35px);
 }
+
 .begin{
     display: flex;
     flex-direction: column;
@@ -110,7 +118,10 @@ input[type=text],
 input[type=email]{
     width: 100%;
     height: 30px; 
-    margin-top: -10px;    
+    margin-top: -10px;  
+    /* box-sizing: border-box; */
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
 }
 [type="radio"]:checked+span::before{
     content: "";
@@ -248,6 +259,8 @@ p{
     position: relative;
     margin:auto;
 }
+
+
 
 /* .failed{
     display: none;
