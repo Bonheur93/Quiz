@@ -176,7 +176,7 @@ let questionActif = {
 
     {
         TitreQuestion : "Traduisez \"\Salut !\"\ en Englais?",
-        assertion :["You", "How it it", "Wake-up", "Hello!"],
+        assertion :["You", "How is it", "Wake-up", "Hello!"],
         Reponse : 'Hello!',
     },
 
