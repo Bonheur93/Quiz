@@ -100,7 +100,16 @@ h1{
 }
 .emailLab{
     margin-top: 15px;
-    font-size: small;   
+    left: 0%;
+    right: 12.63%;
+    top: 0%;
+    bottom: 81.32%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #555555;   
 }
 div .emailLab{
     margin-top: 20px;
