@@ -10,7 +10,6 @@ const sectionLogin =document.querySelector(".sectionLogin");
 const quitter = document.querySelector(".quitter");
 const suivant = document.querySelector(".suivant");
 const end = document.querySelector(".end");
-// const accueil = "accueil";
 const accueil = document.getElementById('accueil');
 const questionForm = document.querySelector('#questionForm');
 const chargeQuiz = document.querySelector('#chargeQuiz');
@@ -19,15 +18,16 @@ const formScore = document.querySelector (".formScore");
 const prenom = document.querySelector (".prenom");
 const adMail = document.querySelector (".adMail");
 const failed = document.querySelector('.failed');
-const congrat = document.querySelector ('.congrat')
-//obj pour contenir les infos sur le user
+const congrat = document.querySelector ('.congrat');
+const form = document.getElementById('form');
+//object pour contenir les infos sur le user
 let utilisateur = {
     nom: '',
     email: '',
     score: 0
 }
 
-const form = document.getElementById('form');
+
 
 // Validation de username et email part I
 
