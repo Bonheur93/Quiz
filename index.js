@@ -85,7 +85,7 @@ function checkIdentityName(){
 
 function checkIdentityMail() {
     if (email.value.length == 0){
-        document.getElementById("erreurMail").innerText = "N’oubliez pas de renseigner votre email avant de commencer le Quiz";
+        document.getElementById("erreurMail").innerText = "N’oubliez pas de renseigner votre email valide avant de commencer le Quiz";
         email.style.border="1px solid red";
         return false
     }else{

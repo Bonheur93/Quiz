@@ -128,11 +128,41 @@ input[type=email]{
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
 }
-[type="radio"]:checked+span::before{
-    content: "";
-    background:#028A3D;
 
+.answer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 5px;
+    cursor: pointer;
 }
+
+.answer > input {
+    accent-color: #028A3D;
+    
+}
+
+.assert{
+    position: relative;
+    margin: 20px;
+    border: 1px solid;
+    height: 30px;
+    border-color: gray;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.assert:hover{
+    border: 3px solid #028A3D;
+    cursor: pointer;
+}
+
+
+/* //////////////////////////////////////////////// */
+
 .paragraph{
     
 font-family: 'Inter';
@@ -212,18 +242,7 @@ color: #555555;
 .suivant-inactif:hover{
     background-color: rgb(7, 97, 62); 
 }
-.assert{
-    margin: 20px;
-    border: 1px solid;
-    height: 30px;
-    border-color: gray;
-    padding-top: 15px;
-    padding-left: 10px;
-}
-.assert:hover{
-    border: 3px solid rgba(10, 180, 87, 0.801);
-    cursor: pointer;
-}
+
 
 p{
     text-align: center;
@@ -490,3 +509,4 @@ p{
     
     
 }
+
