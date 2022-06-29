@@ -3,8 +3,12 @@ body{
 0%, rgba(142, 217, 235, 0.85) 99.84%);
 /* width: 100vw;
 height: 100vh; */
-/* min-height: 50% ;
-min-width: 400px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+
  }
  
 .sectionLogin{
@@ -12,12 +16,15 @@ display: block;
 position: relative;
 width: 350px;
 height: 400px;
-left: 0%;
+left: 10%;
 top: 40px;
 padding: 40px;
 background-color: #ffff;
 border-radius: 5px;
-margin:auto;
+margin-right: 15%;
+margin-top: 25px;
+
+
 
 }
 .quizOne{
@@ -274,7 +281,7 @@ p{
         justify-content: center;
         width: 300px;
         height: 400px;
-        /* margin-top: 50px; */
+    
         margin-bottom: 0px;
     }
     
@@ -287,7 +294,7 @@ p{
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 500px;
+        height: 460px;
         /* margin-top: 260px; */
         margin-bottom: 0px;
     }
@@ -295,16 +302,19 @@ p{
     
 }
 
-@media screen and (max-width : 450px) {
+@media screen and (max-width : 500px) {
     .sectionLogin{
         display: block;
         align-items: center;
         justify-content: center;
         width: 200px;
-        height: 510px;
+        height: 470px;
         /* margin-top: 210px; */
         margin-bottom: 0px;
-        margin-left: 70px;
+        
+    }
+    h1{
+        margin-top: 0px;
     }
     
     
@@ -315,11 +325,33 @@ p{
         display: block;
         align-items: center;
         justify-content: center;
-        width: 200px;
-        height: 530px;
-        /* margin-top: 210px; */
-        margin-bottom: 0px;
-        margin-left: 20px;
+        width: 180px;
+        height: 550px;
+        margin-bottom: 10px;
+        position: fixed;
+        margin-left: 10px;
+      
+        
+        
+    }
+    
+    
+}
+
+@media screen and (max-width : 300px) {
+    .sectionLogin{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 550px;
+        margin-bottom: 10px;
+        position: fixed;
+        margin-left: -20px;
+
+      
+        
+        
     }
     
     
