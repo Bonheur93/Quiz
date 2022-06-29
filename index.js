@@ -117,6 +117,8 @@ buttonBegin.addEventListener('click', (e) => {
     if(end.style.display === 'none') {
         end.style.display ='block';
         imgFaled()
+    const score = document.querySelector(".score");
+    score.textContent = utilisateur.score + "/15" ;
     quizOne.style.display ='none';
     }else{
         end.style.display ='none';

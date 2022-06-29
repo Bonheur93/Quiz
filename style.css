@@ -266,7 +266,46 @@ p{
     display: none;
     margin: auto; 
 } */
+/* responsive */
+@media screen and (max-width : 1000px) {
+    .sectionLogin{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 400px;
+        margin-top: 300px;
+        margin-bottom: 0px;
+    }
+    
+}
 
+@media screen and (max-width : 750px) {
+    .sectionLogin{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 400px;
+        margin-top: 300px;
+        margin-bottom: 0px;
+    }
 
+    
+}
 
+@media screen and (max-width : 450px) {
+    .sectionLogin{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 480px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        margin-left: 30px;
+    }
+    
+    
+}
  
