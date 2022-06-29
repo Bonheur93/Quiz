@@ -369,7 +369,7 @@ p{
     }
 
     .quitter{
-        width: 10em;
+        width: 7em;
         height: 2.5em;
         color:white;
         font-size: 11px;
@@ -382,7 +382,7 @@ p{
 
 .suivant-inactif{
     height: 2.5em;
-    width: 10em;
+    width: 7em;
     color:white;
     font-size: 11px;
     background: rgb(11, 172, 84);
@@ -391,6 +391,9 @@ p{
     border-color:rgb(115, 189, 147);
     /* cursor: not-allowed ; */
 
+}
+.suivant-inactif:hover{
+    background-color: rgb(5, 95, 61); 
 }
 
 }
