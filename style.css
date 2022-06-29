@@ -1,9 +1,7 @@
 body{  
     background: linear-gradient(90deg, #85F6B8
 0%, rgba(142, 217, 235, 0.85) 99.84%);
- /* width: 100vw; */
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +21,8 @@ background-color: #ffff;
 border-radius: 5px;
 margin-right: 15%;
 margin-top: 25px;
-
-
-
 }
+
 .quizOne{
 display: none;
 position: relative;
@@ -122,13 +118,14 @@ div .buttonBegin{
 input[type=text],
 input[type=email]{
     width: 100%;
-    height: 30px; 
+    height: 35px; 
     margin-top: -10px;  
     /* box-sizing: border-box; */
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
 }
 
+/* Styliser le boutton radion et le labe */
 .answer {
     width: 100%;
     height: 100%;
