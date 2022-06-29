@@ -114,7 +114,7 @@ buttonBegin.addEventListener('click', (e) => {
    });
 
    quitter.addEventListener('click', () => {    
-    if(end.style.display === 'none') {
+    if(end.style.display = 'none') {
         end.style.display ='block';
         imgFaled()
     const score = document.querySelector(".score");
@@ -126,7 +126,7 @@ buttonBegin.addEventListener('click', (e) => {
    });
 
    accueil.addEventListener('click', () => {
-    if(sectionLogin.style.display === 'none') {
+    if(sectionLogin.style.display == 'none') {
         sectionLogin.style.display ='block';
         end.style.display ='none';
     }
