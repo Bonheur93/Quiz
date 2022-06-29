@@ -429,7 +429,7 @@ p{
 
 @media screen and (max-width : 310px) {
     .quizOne{
-        display: block;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 180px;
