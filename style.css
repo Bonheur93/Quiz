@@ -1,10 +1,10 @@
 body{  
     background: linear-gradient(90deg, #85F6B8
 0%, rgba(142, 217, 235, 0.85) 99.84%);
-width: 100%;
-height: auto;
-min-height: 50% ;
-min-width: 400px;
+/* width: 100vw;
+height: 100vh; */
+/* min-height: 50% ;
+min-width: 400px; */
  }
  
 .sectionLogin{
@@ -274,20 +274,21 @@ p{
         justify-content: center;
         width: 300px;
         height: 400px;
-        margin-top: 300px;
+        /* margin-top: 50px; */
         margin-bottom: 0px;
     }
     
 }
 
 @media screen and (max-width : 750px) {
+    
     .sectionLogin{
         display: block;
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 400px;
-        margin-top: 300px;
+        height: 430px;
+        /* margin-top: 260px; */
         margin-bottom: 0px;
     }
 
@@ -309,3 +310,17 @@ p{
     
 }
  
+@media screen and (max-width : 350px) {
+    .sectionLogin{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 480px;
+        margin-top: 210px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+    }
+    
+    
+}
