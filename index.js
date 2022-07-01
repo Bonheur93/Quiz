@@ -64,10 +64,7 @@ function checkEmail (email){
     return validEmail.test(email.value); 
     
 }
-// function nonspace (input){
-//     input.value = input.value.replace (/s/gi, "");
-//     return true;
-// }
+
 function checkName (username){
     const validUserName = /^([a-zA-Z]{3,20})$/;
     utilisateur.nom = username.value;
