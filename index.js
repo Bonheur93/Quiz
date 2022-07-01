@@ -332,8 +332,7 @@ let minute = 100;
             imgFaled()
             const score = document.querySelector(".score");
             score.textContent = utilisateur.score + "/15" ;
-            
-             
+   
         }
        
        } 
