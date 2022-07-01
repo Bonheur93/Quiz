@@ -66,7 +66,7 @@ function checkEmail (email){
 }
 
 function checkName (username){
-    const validUserName = /^([a-z A-Z]{3,20})$/;
+    const validUserName = /^([a-zA-Z]{3,20})$/;
     utilisateur.nom = username.value;
     return validUserName.test(username.value); 
     
@@ -76,7 +76,7 @@ function checkName (username){
 // Test de validation de l'imput UserName et d'Email
 
 function checkIdentityName(){
-    if (username.value.length == 0){
+    if (username.value.length == 0 ||(trim(username.value)="")){
         document.getElementById("erreurNom").innerText="N’oubliez pas de renseigner votre nom avant de commencer le Quiz.";
         username.style.border="1px solid red";
         return false;
