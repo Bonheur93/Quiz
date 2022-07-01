@@ -76,7 +76,7 @@ function checkName (username){
 // Test de validation de l'imput UserName et d'Email
 
 function checkIdentityName(){
-    if (username.value.length == 0 ||(trim(username.value)="")){
+    if (username.value.length == 0){
         document.getElementById("erreurNom").innerText="N’oubliez pas de renseigner votre nom avant de commencer le Quiz.";
         username.style.border="1px solid red";
         return false;
