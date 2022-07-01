@@ -81,9 +81,10 @@ function checkIdentityName(){
         username.style.border="1px solid red";
         return false;
     } else{
+        const nomOk = checkName(username)
         document.getElementById("erreurNom").innerText=""
         //username.style.border="1px solid green"
-        return true;
+        return nomOk;
     }   
 }
 
@@ -105,7 +106,7 @@ function checkIdentityMail() {
 
 buttonBegin.addEventListener('click', (e) => {
     e.preventDefault()
-    if (  checkIdentityName()==true && checkIdentityMail()==true) {
+    if (checkIdentityName()==true && checkIdentityMail()==true) {
         sectionLogin.style.display ='none';
         quizOne.style.display = 'block';
         chargeQuestion(questionActif.index);
