@@ -169,6 +169,7 @@ font-size: 20px;
 line-height: 32px;
 text-align: center;
 color: #555555;
+margin-top: -15px;
 
 }
 
@@ -215,7 +216,7 @@ color: #555555;
 .quitter:hover{
     background-color: #85643d ;
 }
-.suivant{
+/* .suivant{
     height: 2.5em;
     width: 10em;
     color:white;
@@ -224,21 +225,33 @@ color: #555555;
     cursor: pointer;  
     box-shadow:  5px 4px 5px rgb(147, 153, 150);;
     border-color:rgba(2, 138, 61, 1);
-}
-.suivant-inactif{
+} */
+
+#btn-suivant{
     height: 2.5em;
     width: 10em;
     color:white;
     font-size: 15px;
-    background: rgb(10, 134, 66);
+    background: rgb(123, 233, 173);
+    /* cursor: pointer;   */
+    box-shadow:  5px 4px 5px rgb(147, 153, 150);;
+    border-color:rgb(177, 231, 201);
+    cursor: not-allowed ;
+}
+/* .suivant-inactif{
+    height: 2.5em;
+    width: 10em;
+    color:white;
+    font-size: 15px;
+    background: rgb(123, 233, 173);
     cursor: pointer;  
     box-shadow:  5px 4px 5px rgb(147, 153, 150);;
-    border-color:rgb(10, 134, 66);
-    /* cursor: not-allowed ; */
-}
-.suivant-inactif:hover{
+    border-color:rgb(177, 231, 201);
+    cursor: not-allowed ;
+} */
+/* .suivant-inactif:hover{
     background-color: rgb(7, 97, 62); 
-}
+} */
 
 
 p{
@@ -267,7 +280,7 @@ p{
 }
 .error{
     color: #fa020f;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .congrat{
@@ -292,7 +305,6 @@ p{
 
 @media screen and (max-width : 750px) {
     
-
     .sectionLogin{
         display: block;
         align-items: center;
@@ -339,6 +351,7 @@ p{
         line-height: 25px;
         text-align: center;
         color: #555555;
+        margin-top: -15px;
     
         }
 
@@ -432,7 +445,8 @@ p{
 
 }
 
-.suivant-inactif{
+
+#btn-suivant{
     height: 2.5em;
     width: 7em;
     color:white;

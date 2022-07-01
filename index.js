@@ -9,6 +9,7 @@ const quizOne = document.querySelector(".quizOne");
 const sectionLogin =document.querySelector(".sectionLogin");
 const quitter = document.querySelector(".quitter");
 const suivant = document.querySelector(".suivant");
+const suivantinactif = document.querySelector(".suivant-inactif")
 const end = document.querySelector(".end");
 const accueil = document.getElementById('accueil');
 const questionForm = document.querySelector('#questionForm');
@@ -52,7 +53,7 @@ username.addEventListener ('input', function(){
         document.getElementById("erreurNom").innerText="N’oubliez pas de renseigner votre nom avant de commencer le Quiz.";
     }
 });
-///////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // Fonction pour tester le regex pour validation de mail et username 
 
@@ -60,12 +61,14 @@ function checkEmail (email){
     const validEmail = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
     utilisateur.email = email.value;
     return validEmail.test(email.value); 
+    
 }
 
 function checkName (username){
     const validUserName = /^([a-z A-Z]{3,20})$/;
     utilisateur.nom = username.value;
     return validUserName.test(username.value); 
+    
 }
 
 
@@ -85,7 +88,7 @@ function checkIdentityName(){
 
 function checkIdentityMail() {
     if (email.value.length == 0){
-        document.getElementById("erreurMail").innerText = "N’oubliez pas de renseigner votre email valide avant de commencer le Quiz";
+        document.getElementById("erreurMail").innerText = "N’oubliez pas de renseigner votre email avant de commencer le Quiz";
         email.style.border="1px solid red";
         return false
     }else{
@@ -108,7 +111,9 @@ buttonBegin.addEventListener('click', (e) => {
         prenom.innerText= utilisateur.nom;
         adMail.innerText= utilisateur.email ;
     } else {
-        console.log("non");
+
+        checkIdentityName();
+        checkIdentityMail();
     }
     
    });
@@ -132,7 +137,9 @@ buttonBegin.addEventListener('click', (e) => {
     }
    });
 
-   // object question active 
+   ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+   // Compteur question active 
 let questionActif = {
     index: 0
 }
@@ -268,12 +275,30 @@ let minute = 100;
        
  }, 1000);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+// Fonction pour parcourrir et checcker la page actuelle avant de passer à la  suivante suivante
  const pageSuivante = function (){
     for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
-        if(assertions[i].checked) {
+        if(assertions[i].checked || (miniterie==0) ) {
+
+            // btnSuivant.disabled = false;
+            // btnSuivant.style.background="green";
+            // btnSuivant.style.cursor="pointer";
             assertions[i].value +' = '+question[questionActif.index].Reponse;
+           
+    // Activation du boutton Suivant 
+            
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Si l'assertion n'est pas cochée
+            chargeQuestion(questionActif.index);
+            document.querySelector('#questionForm').reset();
+            miniterie = 60;
+            minute = 100;
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Si la question ainsi que son index est égale à l'assertion ainsi que sa réponse alors le compteur sauve pour le score final
             if(assertions[i].value == question[questionActif.index].Reponse) {
                 //alert('reussite');
                 utilisateur.score += 1;
@@ -281,19 +306,26 @@ let minute = 100;
                 
                 //alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
             }
-            else {
-                //alert('echec');
-               // alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
+            // else {
+            //     //alert('echec');
+            //    // alert('nom: ' +utilisateur.nom+' email: ' + utilisateur.email+' score:' + utilisateur.score);
                 
-            }
-    
+            // }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Compteur pour afficher la page suivante 
             questionActif.index += 1;
             chargeQuestion(questionActif.index);
+            // btnSuivant.disabled = true;
+            // btnSuivant.style.cursor="not-allowed";
+            // btnSuivant.style.backgroundColor="rgb(123, 233, 173)";
             document.querySelector('#questionForm').reset();
-            console.log(utilisateur.score);    
+            //console.log(utilisateur.score);    
             //break;
             
-        } 
+        }
+        
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // vérifier la longueur de la question et le compteur avec l'index de la question sont égales pour afin passer à la dernière section
          if(questionActif.index == (question.length)){
@@ -306,7 +338,7 @@ let minute = 100;
              
         }
        
-       }
+       } 
 
  }
       function imgFaled(){
@@ -315,7 +347,6 @@ let minute = 100;
     } 
  
  }
-
 
  //Changer le page quand on appuie sur suivant et enregistrement des réponses
 btnSuivant.addEventListener('click', function(){
