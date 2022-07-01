@@ -21,6 +21,7 @@ const adMail = document.querySelector (".adMail");
 const failed = document.querySelector('.failed');
 const congrat = document.querySelector ('.congrat');
 const form = document.getElementById('form');
+const answer = document.querySelectorAll('.answer');
 //object pour contenir les infos sur le user
 let utilisateur = {
     nom: '',
@@ -281,10 +282,6 @@ let minute = 100;
  const pageSuivante = function (){
     for (let i = 0; i < assertions.length; i++) { // La boucle pour parcourir les assertions 
         if(assertions[i].checked || (miniterie==0) ) {
-
-            // btnSuivant.disabled = false;
-            // btnSuivant.style.background="green";
-            // btnSuivant.style.cursor="pointer";
             assertions[i].value +' = '+question[questionActif.index].Reponse;
            
     // Activation du boutton Suivant 
@@ -316,9 +313,9 @@ let minute = 100;
 // Compteur pour afficher la page suivante 
             questionActif.index += 1;
             chargeQuestion(questionActif.index);
-            // btnSuivant.disabled = true;
-            // btnSuivant.style.cursor="not-allowed";
-            // btnSuivant.style.backgroundColor="rgb(123, 233, 173)";
+            btnSuivant.disabled = true;
+            btnSuivant.style.cursor="not-allowed";
+            btnSuivant.style.backgroundColor="rgb(123, 233, 173)";
             document.querySelector('#questionForm').reset();
             //console.log(utilisateur.score);    
             //break;
@@ -355,7 +352,16 @@ btnSuivant.addEventListener('click', function(){
     miniterie = 60;
     minute = 100;
 
-}) 
+}) ;
+
+// Desactiver le boutton avant de cocher l'assertion
+answer.forEach((el) => {
+    el.addEventListener('click', function(){
+    btnSuivant.disabled = false;
+    btnSuivant.style.background="green";
+    btnSuivant.style.cursor="pointer";
+})
+}); 
 
 
 

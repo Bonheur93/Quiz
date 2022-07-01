@@ -452,10 +452,10 @@ p{
     color:white;
     font-size: 11px;
     background: rgb(11, 172, 84);
-    cursor: pointer;  
+   /* // cursor: pointer;   */
     box-shadow:  5px 4px 5px rgb(147, 153, 150);;
     border-color:rgb(115, 189, 147);
-    /* cursor: not-allowed ; */
+    cursor: not-allowed ; 
 }
 
 .buttonQuitter{
@@ -464,7 +464,7 @@ p{
     justify-content: space-evenly;
     border-radius: 5px;
 }
-.suivant-inactif:hover{
+#btn-suivant:hover{
     background-color: rgb(5, 95, 61); 
 }
 
