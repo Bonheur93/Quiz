@@ -258,7 +258,7 @@ p{
     text-align: center;
 }
 .accueil{
-    width: 228px;
+    width: 190px;
     height: 59px;
     font-size: 20px;
     background-color:rgba(8, 128, 214, 1);
@@ -268,9 +268,11 @@ p{
     padding: 5px;
     box-shadow:  5px 5px 5px rgb(165, 184, 236);
     border-color: rgba(8, 128, 214, 1);  
+
 }
 .buttonAccueil{
     text-align: center; 
+    margin: 50px;
 }
 .accueil:hover{
     background-color: rgb(45, 175, 236);
