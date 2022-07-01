@@ -362,21 +362,7 @@ answer.forEach((el) => {
     btnSuivant.style.cursor="pointer";
 })
 }); 
-// username.forEach((biginUser) => {
-// biginUser.addEventListener('click', function(){
-// buttonBegin.disabled = false;
-// buttonBegin.style.background="green";
-// buttonBegin.style.cursor = "pointer";
-// })
-// });
 
-// email.forEach((biginMail) => {
-//     biginMail.addEventListener('click', function(){
-//         buttonBegin.disabled = false;
-//         buttonBegin.style.background ="green";
-//         buttonBegin.style.cursor ="pointer";
-//     })
-// });
 
 
 
