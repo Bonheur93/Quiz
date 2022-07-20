@@ -66,7 +66,7 @@ function checkEmail (email){
 }
 
 function checkName (username){
-    const validUserName = /^([a-z A-Z]{3,20})$/;
+    const validUserName = /^[a-zA-Z\-]+$/;
     // const moncontentNom = username.value.trim();
     // const moncontentMail = email.value.trim();
     utilisateur.nom = username.value;
