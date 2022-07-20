@@ -1,44 +1,40 @@
-body{  
-    background: linear-gradient(90deg, #85F6B8
-0%, rgba(142, 217, 235, 0.85) 99.84%);
+html,
+body {
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0px;
+    align-content: center;
+    /* margin-bottom: 0px; */
 
- }
- 
-.sectionLogin{
-display: block;
-position: relative;
-width: 350px;
-height: 400px;
-left: 10%;
-top: 40px;
-padding: 40px;
-background-color: #ffff;
-border-radius: 5px;
-margin-right: 15%;
-margin-top: 25px;
 }
 
-.quizOne{
-display: none;
-position: relative;
-width: 350px;
-height: 400px;
-left: 10%;
-top: 40px;
-padding: 40px;
-background-color: #ffff;
-border-radius: 5px;
-margin-right: 15%;
-margin-top: 25px;
-
-    
+.sectionLogin {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 40px;
+    background-color: #ffff;
+    border-radius: 5px;
 }
-.end{
+
+.quizOne {
+    display: none;
+    flex-direction: column;
+    width: 350px;
+    padding: 40px;
+    background-color: #ffff;
+    border-radius: 5px;
+}
+
+.end {
     display: none;
     position: relative;
     width: 300px;
@@ -51,11 +47,11 @@ margin-top: 25px;
     text-align: center;
     margin-right: 15%;
     margin-top: 25px;
-         
+
 }
 
-h1{
-    
+h1 {
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -67,36 +63,41 @@ h1{
     margin-top: 10px;
 }
 
-.begin{
+.begin {
     display: flex;
     flex-direction: column;
     margin: 1px;
     margin-top: -1em;
 }
-.button{
+
+.button {
     text-align: center;
     margin-top: -10px;
-    
+
 }
+
 .buttonBegin {
     height: 2.5em;
     width: 10em;
-    color:white;
+    color: white;
     font-size: 15px;
     background: rgb(2, 88, 39);
-    cursor: pointer;  
-    box-shadow:  5px 4px 5px rgb(147, 153, 150);;
+    cursor: pointer;
+    box-shadow: 5px 4px 5px rgb(147, 153, 150);
+    ;
     border-color: rgb(179, 226, 199);
     margin: 10px;
     /* cursor: not-allowed; */
 
 }
-.buttonBegin:hover{
+
+.buttonBegin:hover {
     background-color: rgb(230, 240, 236);
     color: black;
-    
+
 }
-.emailLab{
+
+.emailLab {
     margin-top: 15px;
     left: 0%;
     right: 12.63%;
@@ -107,21 +108,24 @@ h1{
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #555555;   
+    color: #555555;
 }
-div .emailLab{
+
+div .emailLab {
     margin-top: 20px;
     padding: auto;
     padding-bottom: 10px;
 }
-div .buttonBegin{
+
+div .buttonBegin {
     margin-top: 25px;
 }
+
 input[type=text],
-input[type=email]{
+input[type=email] {
     width: 100%;
-    height: 35px; 
-    margin-top: -10px;  
+    height: 35px;
+    margin-top: -10px;
     /* box-sizing: border-box; */
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
@@ -140,12 +144,12 @@ input[type=email]{
     cursor: pointer;
 }
 
-.answer > input {
+.answer>input {
     accent-color: #028A3D;
-    
+
 }
 
-.assert{
+.assert {
     position: relative;
     margin: 20px;
     border: 1px solid;
@@ -154,7 +158,8 @@ input[type=email]{
     padding-top: 15px;
     padding-left: 10px;
 }
-.assert:hover{
+
+.assert:hover {
     border: 3px solid #028A3D;
     cursor: pointer;
 }
@@ -162,62 +167,70 @@ input[type=email]{
 
 /* //////////////////////////////////////////////// */
 
-.paragraph{
-    
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 32px;
-text-align: center;
-color: #555555;
-margin-top: -15px;
+.paragraph {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #555555;
+    margin-top: -15px;
 
 }
 
-.progressbar{
+.progressbar {
     width: 100%;
     background-color: rgb(194, 199, 194);
     margin-top: 5px;
     border-radius: 20px;
     height: 10px;
-    
+
 }
-.progressBar{
+
+.progressBar {
     background-color: green;
     width: 100%;
     height: 10px;
     border-radius: 20px;
 }
-.question{
+
+.question {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 }
-.paragraph1{
+
+.paragraph1 {
     text-align: center;
     margin-top: -6px;
 }
-.buttonQuitter{
+
+.buttonQuitter {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     border-radius: 5px;
 }
-.quitter{
+
+.quitter {
     width: 10em;
     height: 2.5em;
-    color:white;
+    color: white;
     font-size: 15px;
     cursor: pointer;
-    box-shadow:  5px 4px 5px #aca9a7;;
-    border-color:#EC880C;
+    box-shadow: 5px 4px 5px #aca9a7;
+    ;
+    border-color: #EC880C;
     background: rgba(236, 136, 12, 1);
 }
-.quitter:hover{
-    background-color: #85643d ;
+
+.quitter:hover {
+    background-color: #85643d;
 }
+
 /* .suivant{
     height: 2.5em;
     width: 10em;
@@ -229,98 +242,97 @@ margin-top: -15px;
     border-color:rgba(2, 138, 61, 1);
 } */
 
-#btn-suivant{
+#btn-suivant {
     height: 2.5em;
     width: 10em;
-    color:white;
+    color: white;
     font-size: 15px;
     background: rgb(123, 233, 173);
     /* cursor: pointer;   */
-    box-shadow:  5px 4px 5px rgb(147, 153, 150);;
-    border-color:rgb(177, 231, 201);
-    cursor: not-allowed ;
+    box-shadow: 5px 4px 5px rgb(147, 153, 150);
+    ;
+    border-color: rgb(177, 231, 201);
+    cursor: not-allowed;
 }
 
-p{
+p {
     text-align: center;
 }
-.accueil{
+
+.accueil {
     width: 190px;
     height: 59px;
     font-size: 20px;
-    background-color:rgba(8, 128, 214, 1);
+    background-color: rgba(8, 128, 214, 1);
     color: #ffff;
     cursor: pointer;
     border-radius: 2px;
     padding: 5px;
-    box-shadow:  5px 5px 5px rgb(165, 184, 236);
-    border-color: rgba(8, 128, 214, 1);  
+    box-shadow: 5px 5px 5px rgb(165, 184, 236);
+    border-color: rgba(8, 128, 214, 1);
 
 }
-.buttonAccueil{
-    text-align: center; 
+
+.buttonAccueil {
+    text-align: center;
     margin: 50px;
 }
-.accueil:hover{
+
+.accueil:hover {
     background-color: rgb(45, 175, 236);
 }
-.begin input:focus{
+
+.begin input:focus {
     outline: 0;
 }
-.error{
+
+.error {
     color: #fa020f;
     font-size: 10px;
 }
 
-.congrat{
-    
+.congrat {
+
     position: relative;
-    margin:auto;
+    margin: auto;
 }
 
 
 /* responsive */
 @media screen and (max-width : 1000px) {
-    .sectionLogin{
+    .sectionLogin {
         display: block;
         align-items: center;
         justify-content: center;
         width: 300px;
-        height: 400px;
+        /* height: 400px; */
         margin-bottom: 0px;
     }
-    
+
 }
 
 @media screen and (max-width : 750px) {
-    
-    .sectionLogin{
-        display: block;
-        align-items: center;
-        justify-content: center;
-        width: 250px;
-        height: 460px;
+
+    .sectionLogin {
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        width: 350px;
+        /* max-height: min-content; */
         /* margin-top: 260px; */
-        margin-bottom: 0px;
+        /* margin-bottom: 0px; */
     }
 
-    
+
 }
 
 @media screen and (max-width : 500px) {
-    .sectionLogin{
-        display: block;
-        align-items: center;
-        justify-content: center;
+    .sectionLogin {
         width: 300px;
-        height: 400px;
-        margin-top: 100px; 
-        margin-bottom: 0px;
-        margin-left: -30px;
-        
     }
-    h1{
-    
+
+    h1 {
+
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
@@ -332,213 +344,199 @@ p{
         margin-top: 5px;
     }
 
-    .paragraph{
-    
+    .paragraph {
+
         font-family: 'Inter';
         font-style: normal;
-        font-size: 17px; 
+        font-size: 17px;
         line-height: 25px;
         text-align: center;
         color: #555555;
         margin-top: -15px;
-    
-}
-.accueil{
-    width: 190px;
-    height: 59px;
-    font-size: 20px;
-    background-color:rgba(8, 128, 214, 1);
-    color: #ffff;
-    cursor: pointer;
-    border-radius: 2px;
-    padding: 5px;
-    box-shadow:  5px 5px 5px rgb(165, 184, 236);
-    border-color: rgba(8, 128, 214, 1); 
-    margin-left: -15px; 
 
-}
-
-   .end{
-            display: none;
-            position: relative;
-            width: 250px;
-            height: 350px;
-            left: 1%;
-            top: 40px;
-            padding: 40px;
-            background-color: #ffff;
-            border-radius: 5px;
-            text-align: center;
-            margin-right: 10%;
-            margin-top: 12vh;
-            margin-left: 10%;
-                 
-        }
-
-    
-}
- 
-@media screen and (max-width : 350px) {
-    .sectionLogin{
-        display: block;
-        align-items: center;
-        justify-content: center;
-        width: 180px;
-        height: 550px;
-        margin-bottom: 10px;
-        position: fixed;
-        margin-left: 10px;
-          
     }
 
-    .paragraph{
-    
+    .accueil {
+        width: 190px;
+        height: 59px;
+        font-size: 20px;
+        background-color: rgba(8, 128, 214, 1);
+        color: #ffff;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 5px;
+        box-shadow: 5px 5px 5px rgb(165, 184, 236);
+        border-color: rgba(8, 128, 214, 1);
+        margin-left: -15px;
+
+    }
+
+    .end {
+        display: none;
+        position: relative;
+        width: 250px;
+        height: 350px;
+        left: 1%;
+        top: 40px;
+        padding: 40px;
+        background-color: #ffff;
+        border-radius: 5px;
+        text-align: center;
+        margin-right: 10%;
+        margin-top: 12vh;
+        margin-left: 10%;
+
+    }
+
+
+}
+
+@media screen and (max-width : 350px) {
+    .sectionLogin {
+        width: 180px;
+    }
+
+    .paragraph {
+
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400px;
-        font-size: 10px; 
+        font-size: 10px;
         line-height: 12px;
         text-align: center;
         color: #555555;
-    
-        }
-    
-    
-    
+
+    }
+
+
+
 }
 
 @media screen and (max-width : 310px) {
-    .sectionLogin{
-        display: block;
-        align-items: center;
-        justify-content: center;
+    .sectionLogin {
         width: 180px;
-        height: 550px;
-        margin-bottom: 10px;
-        position: fixed;
-        margin-left: -20px;
-    
-        
     }
-    
-    
+
+
 }
 
 
 
 
 @media screen and (max-width : 1000px) {
-    .quizOne{
-        display: none;
+    .quizOne {
+        /* display: none;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 300px;
-        height: 400px;
-        margin-bottom: 0px;
+        /* height: 400px;
+        margin-bottom: 0px; */
     }
 
 
-    
+
 }
 
 @media screen and (max-width : 750px) {
-    
-    .quizOne{
-        display: none;
+
+    .quizOne {
+        /* display: none;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 250px;
-        height: 400px;
-        /* margin-top: 260px; */
-        margin-bottom: -1px;
+        /* height: 400px;
+        margin-top: 260px;
+        margin-bottom: -1px; */
     }
 
-    .quitter{
+    .quitter {
         width: 7em;
         height: 2.5em;
-        color:white;
+        color: white;
         font-size: 11px;
         cursor: pointer;
-        box-shadow:  4px 3px 4px #aca9a7;;
-        border-color:#EC880C;
+        box-shadow: 4px 3px 4px #aca9a7;
+        ;
+        border-color: #EC880C;
         background: rgba(236, 136, 12, 1);
 
-}
+    }
 
 
-#btn-suivant{
-    height: 2.5em;
-    width: 7em;
-    color:white;
-    font-size: 11px;
-    background: rgb(11, 172, 84);
-   /* // cursor: pointer;   */
-    box-shadow:  5px 4px 5px rgb(147, 153, 150);;
-    border-color:rgb(115, 189, 147);
-    cursor: not-allowed ; 
-}
+    #btn-suivant {
+        height: 2.5em;
+        width: 7em;
+        color: white;
+        font-size: 11px;
+        background: rgb(11, 172, 84);
+        /* // cursor: pointer;   */
+        box-shadow: 5px 4px 5px rgb(147, 153, 150);
+        ;
+        border-color: rgb(115, 189, 147);
+        cursor: not-allowed;
+    }
 
-.buttonQuitter{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border-radius: 5px;
-}
-#btn-suivant:hover{
-    background-color: rgb(5, 95, 61); 
-}
+    .buttonQuitter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 5px;
+    }
+
+    #btn-suivant:hover {
+        background-color: rgb(5, 95, 61);
+    }
 
 }
 
 
 
 @media screen and (max-width : 500px) {
-    .quizOne{
-        display: none;
+    .quizOne {
+        /* display: none;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 200px;
-        height: 470px;
+        /* height: 470px; */
         /* margin-top: 210px; */
-        margin-bottom: 0px;
-        margin-left: 20px;
-        
+        /* margin-bottom: 0px;
+        margin-left: 20px; */
+
     }
-    
-    
+
+
 }
- 
+
 @media screen and (max-width : 350px) {
-    .quizOne{
-        display: none;
+    .quizOne {
+        /* display: none;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 180px;
-        height: 550px;
+        /* height: 550px;
         margin-bottom: 10px;
         position: fixed;
-        margin-left: 10px;
-      
-        
-        
+        margin-left: 10px; */
+
+
+
     }
-    
-    
+
+
 }
 
 @media screen and (max-width : 310px) {
-    .quizOne{
-        display: none;
+    .quizOne {
+        /* display: none;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 180px;
-        height: 550px;
+        /* height: 550px;
         margin-bottom: 10px;
         position: fixed;
-        margin-left: -20px;   
-        
-    }
-    
-    
-}
+        margin-left: -20px; */
 
+    }
+
+
+}
