@@ -59,14 +59,16 @@ username.addEventListener ('input', function(){
 // Fonction pour tester le regex pour validation de mail et username 
 
 function checkEmail (email){
-    const validEmail = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+    const validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     utilisateur.email = email.value;
     return validEmail.test(email.value); 
     
 }
 
 function checkName (username){
-    const validUserName = /^([a-zA-Z]{3,20})$/;
+    const validUserName = /^([a-z A-Z]{3,20})$/;
+    // const moncontentNom = username.value.trim();
+    // const moncontentMail = email.value.trim();
     utilisateur.nom = username.value;
     return validUserName.test(username.value); 
     
